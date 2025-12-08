@@ -37,4 +37,4 @@ y_hat = mlr_X @ yoda
 newbar['Predicted_PPG'] = y_hat
 print(newbar['Predicted_PPG'].sort_values(ascending=False).head(10))
 
-print(yoda)
+print(newbar)
