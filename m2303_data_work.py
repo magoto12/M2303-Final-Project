@@ -8,9 +8,6 @@ s2022 = pd.DataFrame(pd.read_excel('nhlplaystat_2022-23.xlsx'))
 s2023 = pd.DataFrame(pd.read_excel('nhlplaystat_2023-24.xlsx'))
 s2024 = pd.DataFrame(pd.read_excel('nhlplaystat_2024-25.xlsx'))
 
-#print(s2020)
-#y = [P/GP]
-#print(s2020[['Player', 'P/GP']])
 
 
 
@@ -44,11 +41,11 @@ df_all['2022'] = df_all['2022'].fillna(df_all['2022'].min())
 df_all['2023'] = df_all['2023'].fillna(df_all['2023'].min())
 df_all['2024'] = df_all['2024'].fillna(df_all['2024'].min())
 
-#df_all = y
+
 #turn df_all into a numpy
 
 y = df_all[['2020', '2021', '2022', '2023', '2024']].to_numpy()
-#print(y)
+
 
 
 A_T = np.array([
@@ -78,6 +75,5 @@ df_all['2028'] = y_2028
 #print(df_all.sort_values(by='2025', ascending=False))
 #print(df_all.loc[df_all['2025'], 'Player'])
 top10 = df_all.nlargest(10, "2025")[["Player", "2025"]]
-#print(top10)
-betas = {}
+print(df_all)
 
